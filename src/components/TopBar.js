@@ -12,8 +12,8 @@ export default function TopBar() {
     };
 
     return (
-        <div className="w-full flex justify-center fixed">
-            <nav className="m-2 w-min bg-white rounded-2xl">
+        <div className="w-full flex justify-center fixed z-2">
+            <nav className="m-2 w-min bg-white/50 rounded-2xl backdrop-blur-md">
                 <ul className="flex justify-center space-x-4">
                     {nav.map((value, index) => (
                         value.children ? (
