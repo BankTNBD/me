@@ -13,7 +13,7 @@ export default function TopBar() {
 
     return (
         <div className="w-full flex justify-center fixed z-2">
-            <nav className="m-2 w-min bg-white/50 rounded-2xl backdrop-blur-md">
+            <nav className="m-2 w-min bg-[var(--color-primary-background)]/50 rounded-2xl backdrop-blur-md">
                 <ul className="flex justify-center space-x-4">
                     {nav.map((value, index) => (
                         value.children ? (
@@ -23,7 +23,7 @@ export default function TopBar() {
                                 onMouseEnter={() => toggleDropdown(index)}
                                 onMouseLeave={() => toggleDropdown(-1)}
                             >
-                                <button className="px-3 py-2 rounded-md hover:bg-gray-200">
+                                <button className="px-3 py-2 rounded-2xl hover:bg-[var(--color-secondary-background)]">
                                     {value.title}
                                 </button>
                                 {openIndex === index && (
@@ -45,7 +45,7 @@ export default function TopBar() {
                         ) : (
                             <li key={index} className="m-1">
                                 <Link href={value.path} passHref>
-                                    <button className="block px-3 py-2 rounded-2xl hover:bg-gray-200">
+                                    <button className="block px-3 py-2 rounded-2xl hover:bg-[var(--color-secondary-background)]">
                                         {value.title}
                                     </button>
                                 </Link>

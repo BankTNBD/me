@@ -7,10 +7,10 @@ import Card from "@/components/Card";
 export default function Home() {
   return (
     <div className="w-full">
-      <div className="w-full h-screen bg-gray-100 flex flex-col justify-center items-center">
+      <div className="w-full h-screen flex flex-col justify-center items-center">
         <h1 className="mx-10 text-center text-6xl lg:text-8xl">{home.title}</h1>
         <h3 className="mx-10 text-center text-3xl lg:text-4xl">{home.description}</h3>
-        <Link className="my-10 m-5 rounded-4xl bg-white shadow-md" href={home.button.path}>
+        <Link className="my-10 m-5 rounded-2xl bg-[var(--color-primary-background)] hover:bg-[var(--color-secondary-background)] shadow-md" href={home.button.path}>
           <button className="w-max m-3 mx-5">
             {home.button.title}
           </button>
@@ -26,7 +26,7 @@ export default function Home() {
             </Card>
           }
           {home.link.links.map((value, index) => (
-            <Card key={index} className="aspect-square shadow-md rounded-4xl">
+            <Card key={index} className="aspect-square shadow-md rounded-xl transition delay-50 duration-200 ease-in-out hover:-translate-y-1 hover:scale-110 cursor-pointer">
               <Link className="h-full w-full" href={value.path}>
                 <button className="h-full w-full rounded-xl p-0 flex justify-center items-center" style={value.style}>
                   <div>
